@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Glow - Menu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+        <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <link href="static/css/stylesheet.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<header>
+        <nav class="navbar">
+                <a href="index.html" class="grow clickable"><img class="logo" src="static/img/logo.svg"><p class="logoname">Glow</p></a>
+                <!--source: https://www.youtube.com/watch?v=xMTs8tAapnQ-->
+                <label class="hamburgermenu" for="toggle" style="color:white">&#9776;</label>
+                <input type="checkbox" id="toggle">
+                <ul class="menu">
+                        <li class="clickable"><a href="about.html">About</a></li>
+                        <li class="clickable"><a href="contact.html">Contact</a></li>
+                        <li class="food"><div class="clickable"><a href="menu.html">Menu</a></div>
+                                <ul class="dropdown">
+                                        <li class="clickable" onclick="juices()"><a href="menu.html/#juices">Juices</a></li>
+                                        <li class="clickable" onclick="shakes()"><a href="menu.html#shakes">Shakes</a></li>
+                                        <li class="clickable" onclick="bowls()"><a href="menu.html/#bowls">Smoothie bowls</a></li>
+                                        <li class="clickable" onclick="savoury()"><a href="menu.html/#savoury">Savoury</a></li>
+                                        <li class="clickable" onclick="drinks()"><a href="menu.html/#drinks">Other drinks</a></li>
+                                </ul>
+                        </li>
+                        <li class="clickable"><a href="gallery.html">Gallery</a></li>
+                </ul>
+        </nav>
+</header>
+<main>
+<!--        <img src="../static/img/flowers.png" class="backgroundFlowers"/>-->
+<section class="content">
+<!--<a name="juices" class="anchor" style="height: 1em"></a>     -->
+<!--<h1 class="menuheader">Menu</h1>-->
+<ul class="navmenu">
+	<li onclick="juices()" id="onclickjuices" class="clickable"><a class="navmenuitem" href="#juices">Juices</a></li>
+	<li onclick="shakes()" id="onclickshakes" class="clickable"><a class="navmenuitem" href="#shakes">Shakes</a></li>
+	<li onclick="bowls()" id="onclickbowls" class="clickable"><a class="navmenuitem" href="#bowls">Smoothie bowls</a></li>
+	<li onclick="savoury()" id="onclicksavoury" class="clickable"><a class="navmenuitem" href="#savoury">Savoury</a></li>
+	<li onclick="drinks()" id="onclickdrinks" class="clickable"><a class="navmenuitem" href="#drinks">Other drinks</a></li>
+</ul>
+<!--        <img src="static/img/menuDrips.png" id="drips" class="menuDrips">-->
+        <img src="static/img/menuWave.png" id="drips" class="menuDrips">
+
+<section class="menusection">
+
+<h2 class="sectionheader" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="0">Juices</h2>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Mono juices</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+	<dt class="menuitem">Orange Juice</dt>
+		<dd class="menuitemdesc">100% orange</dd>
+	<dt class="menuitem">Apple juice</dt>
+		<dd class="menuitemdesc">100% apple</dd>
+        <dt class="menuitem">Celery juice</dt>
+                <dd class="menuitemdesc">100% celery</dd>
+</dl>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Fruit juices</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Tropical juice</dt>
+                <dd class="menuitemdesc">Pineapple, organge, mango, passion fruit</dd>
+        <dt class="menuitem">Sweet local juice</dt>
+                <dd class="menuitemdesc">Apple, grapes, lemon</dd>
+        <dt class="menuitem">Watermelon juice</dt>
+                <dd class="menuitemdesc">Watermelon, lime</dd>
+        <dt class="menuitem">Summer juice</dt>
+                <dd class="menuitemdesc">Pineapple, melon, lemon, mint</dd>
+</dl>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Green juices</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+	<dt class="menuitem">Local green juice</dt>
+                <dd class="menuitemdesc">Apple, kale, cucumber, lemon, parsley, ginger</dd>
+        <dt class="menuitem">Tropical green juice</dt>
+                <dd class="menuitemdesc">Pineapple, spinach, orange, passion fruit</dd>
+        <dt class="menuitem">Sweet green juice</dt>
+        	<dd class="menuitemdesc">Grapes, spinach, lime</dd>
+</dl>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Veggie juices</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Local veggie juice</dt>
+                <dd class="menuitemdesc">Apple, beetroot, carrot, celery, lemon</dd>
+        <dt class="menuitem">Super veggie juice</dt>
+                <dd class="menuitemdesc">Kale, celery, cucumber, beetroot, carrot, garlic</dd>
+</dl>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Shots</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Ginger shot</dt>
+                <dd class="menuitemdesc">100% ginger</dd>
+        <dt class="menuitem">Immune shot</dt>
+                <dd class="menuitemdesc">Ginger, turmeric, garlic, lemon, cayenne<a name="shakes" class="anchor"></a></dd>
+</dl>
+</section>
+
+<section class="menusection">
+<h2 class="sectionheader" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="0">Shakes</h2>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0"></h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Berry shake</dt>
+                <dd class="menuitemdesc">Banana, strawberry, raspberry, blackberry, coconut water</dd>
+        <dt class="menuitem">Strawberry shake</dt>
+                <dd class="menuitemdesc">Banana, strawberry, date, coconut water</dd>
+	<dt class="menuitem">Green shake</dt>
+                <dd class="menuitemdesc">Banana, pineapple, spinach/kale, kiwi, date, coconut water</dd>
+</dl>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Other shakes</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Peanut butter shake</dt>
+                <dd class="menuitemdesc">Banana, peanut butter, date syrup, coconut water</dd>
+        <dt class="menuitem">Chocolate shake</dt>
+                <dd class="menuitemdesc">Banana, cocoa, cinnamon, date syrup, coconut water</dd>
+	<dt class="menuitem">Superfoods shake</dt>
+		<dd class="menuitemdesc">Banana, maca, goji berries, hemp seeds, dates, spirulina, coconut water<a name="bowls" class="anchor"></a></dd>
+</dl>
+</section>
+
+<section class="menusection">
+<h2 class="sectionheader" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="0">Smoothie bowls</h2>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Fruity smoothie bowls</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Berry smoothie bowl</dt>
+                <dd class="menuitemdesc">Strwberry, raspberry smoothie + granola, cocoa nibs, coconut flakes, blueberry</dd>
+        <dt class="menuitem">Tropical smoothie bowl</dt>
+                <dd class="menuitemdesc">Banana, pineapple, mango smoothie + strawberry, hemp seeds, almond flakes, passion fruit</dd>
+        <dt class="menuitem">Green smoothie bowl</dt>
+                <dd class="menuitemdesc">Banana, spinach, mango smoothie + banana, cocoa nibs, coconut flakes, berries</dd>
+</dl>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Other smoothie bowls</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Mix nut smoothie bowl</dt>
+                <dd class="menuitemdesc">Banana, almond butter, peanut butter smoothie + granola, date sytup, cashews, cocoa nibs</dd>
+        <dt class="menuitem">Yoghurt smoothie bowl</dt>
+                <dd class="menuitemdesc">Banana, coconut youghurt smoothie +  granola, apple mousse, pomegranate<a name="savoury" class="anchor"></a></dd>
+</dl>
+</section>
+
+<section class="menusection">
+<h2 class="sectionheader" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="0">Savoury</h2>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Salads</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Classic salad</dt>
+                <dd class="menuitemdesc">Mix lettuce, tofu, tomato, pepper, cucumber, raddish, spring onion, sprouts + dressing</dd>
+        <dt class="menuitem">Noodle salad</dt>
+                <dd class="menuitemdesc">Courgette noodles, cucumber noodles, carrot noodles + tomato dressing</dd>
+        <dt class="menuitem">Beetroot salad</dt>
+                <dd class="menuitemdesc">Beetroot, rocket, feta, sunflower seeds + dressing</dd>
+	<dt class="menuitem">Fruit salad</dt>
+                <dd class="menuitemdesc">Mix lettuce, mango, strawbery, kiwi, blueberry, raspberry, blackberry, banana</dd>
+</dl>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Soups</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Green cream soup</dt>
+                <dd class="menuitemdesc">Broccoli, spinach, potato, stock + spices</dd>
+        <dt class="menuitem">Tomato soup</dt>
+                <dd class="menuitemdesc">Tomato, dried tomato, pepper, carrot, lentils, stock + spices</dd>
+        <dt class="menuitem">Soup of the day</dt>
+                <dd class="menuitemdesc">Seasonal soup different every day</dd>
+</dl>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Fries</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Classic potato fries</dt>
+                <dd class="menuitemdesc">Potato, salt + sauce</dd>
+        <dt class="menuitem">Sweet potato fries</dt>
+                <dd class="menuitemdesc">Potato, salt + sauce</dd>
+        <dt class="menuitem">Veggie fries</dt>
+                <dd class="menuitemdesc">Carrot, beetroot, parsnip, courgette, spices + sauce</dd>
+</dl>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Veggies</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Steamed broccoli</dt>
+                <dd class="menuitemdesc">Broccoli, salt</dd>
+        <dt class="menuitem">Steamed kale</dt>
+                <dd class="menuitemdesc">Kale, salt</dd>
+        <dt class="menuitem">Carrots with hummus</dt>
+                <dd class="menuitemdesc">Carrot, hummus<a name="drinks" class="anchor"></a></dd>
+</dl>
+</section>
+
+<section class="menusection">
+<h2 class="sectionheader" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="0">Other drinks</h2>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Lemonade</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Classic lemonade</dt>
+                <dd class="menuitemdesc">Lemon, date syrup</dd>
+        <dt class="menuitem">Ginger lemonade</dt>
+                <dd class="menuitemdesc">Lemon, ginger, turmeric, date syrup</dd>
+        <dt class="menuitem">Rhubarb lemonade</dt>
+                <dd class="menuitemdesc">Rhubarb, lemon, date syrup</dd>
+</dl>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Tea</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Mint tea</dt>
+                <dd class="menuitemdesc">100% mint tea</dd>
+	<dt class="menuitem">Green tea</dt>
+                <dd class="menuitemdesc">100% green tea</dd>
+        <dt class="menuitem">Tropical tea</dt>
+                <dd class="menuitemdesc">Hibiscus, rosehip, orange peel, mango, passion fruit, chicory root</dd>
+        <dt class="menuitem">Rosehip tea</dt>
+                <dd class="menuitemdesc">100% rosehip tea</dd>
+</dl>
+<h3 class="menucategory" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="0">Hot chocolate</h3>
+<dl class="menuitemlist" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <dt class="menuitem">Classic hot chocolate</dt>
+                <dd class="menuitemdesc">Cocoa, almond/coconut milk, date syrup</dd>
+        <dt class="menuitem">Karob hot chocolate</dt>
+                <dd class="menuitemdesc">Karob, almond/coconut milk, date syrup</dd>
+</dl>
+</section>
+</section>
+</main>
+<footer>
+        <nav class="footernavbar">
+                <ul class="footermenu">
+                        <li class="clickable"><a href="mailto:contact@glowcafe.com"><img src="static/img/mail.svg">contact@glowcafe.com</a></li>
+                        <li class="clickable"><a href="tel:+447284928491"><img src="static/img/tel.svg">+44&nbsp;728&nbsp;4928&nbsp;491</a></li>
+                </ul>
+
+                <div class="social-icons">
+                        <a target="_blank" href="https://www.facebook.com" class="facebookicon"><img class="clickable" src="static/img/facebook.svg"></a>
+                        <a target="_blank" href="https://www.instagram.com" class="instagramicon"><img class="clickable" src="static/img/instagram.svg"></a>
+                        <a target="_blank" href="https://www.tiktok.com" class="tiktokicon"><img class="clickable" src="static/img/tiktok.svg"></a>
+                </div>
+        </nav>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="static/js/script.js"></script>
+</body>
+</html>
