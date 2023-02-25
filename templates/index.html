@@ -1,88 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Glow</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png" />
-	<link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" />
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#ffffff">
-
-	<link href="static/css/stylesheet.css" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" />
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-</head>
+<title>Grow</title>
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
 <body class="index_body">
-	<header>
-		<nav class="navbar" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="0">
-			<a href="index.html" class="grow clickable" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="0"><img class="logo" src="static/img/logo.png"><p class="logoname">Glow</p></a>
-			<!--source: https://www.youtube.com/watch?v=xMTs8tAapnQ-->
-			<label class="hamburgermenu" for="toggle" style="color:#2F243A">&#9776;</label>
-			<input type="checkbox" id="toggle">
-			<ul class="menu">
-				<li class="clickable" data-aos="fade-down" data-aos-duration="2250" data-aos-offset="0"><a href="about.html">About</a></li>
-				<li class="clickable" data-aos="fade-down" data-aos-duration="2500" data-aos-offset="0"><a href="contact.html">Contact</a></li>
-				<li class="food"><div class="clickable" data-aos="fade-down" data-aos-duration="2750" data-aos-offset="0"><a href="menu.html">Menu</a></div>
-					<ul class="dropdown">
-						<li class="clickable animate__animated animate__zoomIn" onclick="juices()"><a href="menu.html#juices">Juices</a></li>
-						<li class="clickable animate__animated animate__zoomIn" onclick="shakes()"><a href="menu.html#shakes">Shakes</a></li>
-						<li class="clickable animate__animated animate__zoomIn" onclick="bowls()"><a href="menu.html#bowls">Smoothie bowls</a></li>
-						<li class="clickable animate__animated animate__zoomIn" onclick="savoury()"><a href="menu.html#savoury">Savoury</a></li>
-						<li class="clickable animate__animated animate__zoomIn" onclick="drinks()"><a href="menu.html#drinks">Other drinks</a></li>
-					</ul>
-				</li>
-				<li class="clickable" data-aos="fade-down" data-aos-duration="3000" data-aos-offset="0"><a href="gallery.html">Gallery</a></li>
-			</ul>
-		</nav>
-		<img src="static/img/headerWave.png" class="headerDrips" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="0">
-	</header>
-<main>
+{% block header %}
+{{ super() }}
+{% endblock %}
+{% block main %}
 	<section class="landingpage">
 		<div class="text" >
           <h1 class="grow" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="0">Glow</h1>
 			<h1 data-aos="zoom-in" data-aos-duration="1000" id="withOur">with our</h1>
 			<div class="menuIcons">
 				<div class="menuIcon aboutall" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
-					<a href="menu.html#juices" id="juiceIcon"><img src="../static/img/juice.png" id="juiceIconImg" /></a>
+					<a href="/menu/#juices" id="juiceIcon"><img src="{{ url_for('static', filename='img/juice.png') }}" id="juiceIconImg" /></a>
 					<span id="juiceText">juices</span>
 				</div>
 				<div class="menuIcon aboutall" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0">
-					<a href="menu.html#shakes" id="shakeIcon"><img src="../static/img/shake.png" id="shakeIconImg" /></a>
+					<a href="/menu/#shakes" id="shakeIcon"><img src="{{ url_for('static', filename='img/shake.png') }}" id="shakeIconImg" /></a>
 					<span id="shakeText">shakes</span>
 				</div>
 				<div class="menuIcon aboutall" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="0">
-					<a href="menu.html#bowls" id="bowlIcon"><img src="../static/img/bowl.png" id="bowlIconImg" /></a>
+					<a href="/menu/#bowls" id="bowlIcon"><img src="{{ url_for('static', filename='img/bowl.png') }}" id="bowlIconImg" /></a>
 					<span id="bowlText">smoothie bowls</span>
 				</div>
 				<div class="menuIcon aboutall" data-aos="fade-up" data-aos-duration="2500" data-aos-offset="0">
-					<a href="menu.html#savoury" id="savouryIcon"><img src="../static/img/savoury.png" id="savouryIconImg" /></a>
+					<a href="/menu/#savoury" id="savouryIcon"><img src="{{ url_for('static', filename='img/savoury.png') }}" id="savouryIconImg" /></a>
 					<span id="savouryText">savoury dishes</span>
 				</div>
 				<div class="menuIcon aboutall" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="0">
-					<a href="menu.html#drinks" id="drinkIcon"><img src="../static/img/drink.png" id="drinkIconImg" /></a>
+					<a href="/menu/#drinks" id="drinkIcon"><img src="{{ url_for('static', filename='img/drink.png') }}" id="drinkIconImg" /></a>
 					<span id="drinkText">other drinks</span>
 				</div>
 			</div>
 		</div>
 		<div class="bowlImg">
-			<img src="static/img/homepageBowl.png" class="bowl" data-aos-duration="1500" data-aos="fade-up-left" data-aos-offset="0">
+			<img src="{{ url_for('static', filename='img/homepageBowl.png') }}" class="bowl" data-aos-duration="1500" data-aos="fade-up-left" data-aos-offset="0">
 		</div>
 	</section>
 
 	<section class="content">
 <section class="aboutall">
 <h1 class="aboutheading" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="0">Welcome to Glow!</h1>
-	<img src="../static/img/underline.png" class="underline">
+	<img src="{{ url_for('static', filename='img/underline.png') }}" class="underline">
 <div class="about">
 <div class="textwithlink" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
 <p class="abouttext quote">"We believe in creating the best tasting food, by using only the highest quality, plant based produce. Our menu offers a wide variety - from juices, shakes, and other drinks - to smoothie bowls and savoury dishes. All sourced mostly locally from organic, small farms to best serve our local community."</p>
-<div class="blobButton" data-aos="zoom-in" data-aos-duration="2500" data-aos-offset="0"><a href="about.html" class="button menubutton clickable">Read more about us</a></div>
+<div class="blobButton" data-aos="zoom-in" data-aos-duration="2500" data-aos-offset="0"><a href="/about/" class="button menubutton clickable">Read more about us</a></div>
 </div></div></section>
 
 <!--Carousel with reviews-->
@@ -92,19 +60,19 @@
 
   <div class="carousel-inner">
 	<div class="carousel-item active" data-bs-interval="3500">
-		<img src="static/img/review1.png" alt="1" class="d-block w-100 review">
+		<img src="{{ url_for('static', filename='img/review1.png') }}" alt="1" class="d-block w-100 review">
 	</div>
 
 	<div class="carousel-item" data-bs-interval="3500">
-		<img src="static/img/review2.png" alt="1" class="d-block w-100 review">
+		<img src="{{ url_for('static', filename='img/review2.png') }}" alt="1" class="d-block w-100 review">
 	</div>
 
 	<div class="carousel-item" data-bs-interval="3500">
-		<img src="static/img/review3.png" alt="3" class="d-block w-100">
+		<img src="{{ url_for('static', filename='img/review3.png') }}" alt="3" class="d-block w-100">
 	</div>
 
 	<div class="carousel-item" data-bs-interval="3500">
-		<img src="static/img/review4.png" alt="4" class="d-block w-100">
+		<img src="{{ url_for('static', filename='img/review4.png') }}" alt="4" class="d-block w-100">
 	</div>
    </div>
 <!-- Previous/Next controls -->
@@ -121,12 +89,12 @@
 <br>
 <section class="aboutall">
 <h1 class="aboutheading" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="0">Glow with us</h1>
-	<img src="../static/img/underline.png" class="underline">
+	<img src="{{ url_for('static', filename='img/underline.png') }}" class="underline">
 <div class="about">
 <div class="textwithlink">
 <p class="abouttext quote" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">Interested in finding out more?</p>
-<div class="blobButton blobButton3" data-aos="zoom-in" data-aos-duration="2500" data-aos-offset="0"><a href="menu.html" class="button menubutton clickable">See the menu</a></div>
-<div class="blobButton blobButton2" data-aos="zoom-in" data-aos-duration="3000" data-aos-offset="0"><a href="contact.html" class="button contactbutton clickable">Contact us</a></div>
+<div class="blobButton blobButton3" data-aos="zoom-in" data-aos-duration="2500" data-aos-offset="0"><a href="/menu/" class="button menubutton clickable">See the menu</a></div>
+<div class="blobButton blobButton2" data-aos="zoom-in" data-aos-duration="3000" data-aos-offset="0"><a href="/contact/" class="button contactbutton clickable">Contact us</a></div>
 </div></div></section>
 
 <!--Carousel with images-->
@@ -145,59 +113,42 @@
 
 <div class="carousel-inner">
 <div class="carousel-item active" data-bs-interval="3500">
-<img src="static/food/food23.jpg" alt="1" class="d-block w-100">
+<img src="{{ url_for('static', filename='food/food23.jpg') }}" alt="1" class="d-block w-100">
 </div>
 
 <div class="carousel-item" data-bs-interval="3500">
-<img src="static/food/food10.jpg" alt="2" class="d-block w-100">
+<img src="{{ url_for('static', filename='food/food10.jpg') }}" alt="2" class="d-block w-100">
 </div>
 
 <div class="carousel-item" data-bs-interval="3500">
-<img src="static/food/food16.jpg" alt="3" class="d-block w-100">
+<img src="{{ url_for('static', filename='food/food16.jpg') }}" alt="3" class="d-block w-100">
 </div>
 
 
 <div class="carousel-item" data-bs-interval="3500">
-<img src="static/food/food6.jpg" alt="4" class="d-block w-100">
+<img src="{{ url_for('static', filename='food/food6.jpg') }}" alt="4" class="d-block w-100">
 </div>
 
 <div class="carousel-item" data-bs-interval="3500">
-<img src="static/food/food12.jpg" alt="5" class="d-block w-100">
+<img src="{{ url_for('static', filename='food/food12.jpg') }}" alt="5" class="d-block w-100">
 </div>
 
 <div class="carousel-item" data-bs-interval="3500">
-<img src="static/food/food24.jpg" alt="6" class="d-block w-100">
+<img src="{{ url_for('static', filename='food/food24.jpg') }}" alt="6" class="d-block w-100">
 </div>
 </div>
 
 </div>
 </div>
 
-<div class="blobButton blobButton4" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="0"><a href="gallery.html" class="button gallerybutton indexgallerybutton clickable">See more photos<br>in our gallery</a></div>
+<div class="blobButton blobButton4" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="0"><a href="/gallery/" class="button gallerybutton indexgallerybutton clickable">See more photos<br>in our gallery</a></div>
 
 </section>
 <a onclick="topFunction()" id="myBtn" title="Go to top"  data-aos="fade-up" data-aos-duration="2000" data-aos-offset="0"></a>
-</main>
-<footer>
-	<img src="static/img/headerWave.png" class="footerDrips">
-	<nav class="footernavbar">
-		<ul class="footermenu">
-			<li class="clickable" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0"><a href="mailto:contact@glowcafe.com"><img src="static/img/mailfooter.png">contact@glowcafe.com</a></li>
-			<li class="clickable" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0"><a href="tel:+447284928491"><img src="static/img/tel.png">+44&nbsp;728&nbsp;4928&nbsp;491</a></li>
-		</ul>
-
-		<ul class="social-icons">
-			<li data-aos="fade-up" data-aos-duration="2000" data-aos-offset="0"><a target="_blank" href="https://www.facebook.com" class="facebookicon"><img class="clickable" src="static/img/facebook.png"></a></li>
-			<li data-aos="fade-up" data-aos-duration="2500" data-aos-offset="0"><a target="_blank" href="https://www.instagram.com" class="instagramicon"><img class="clickable" src="static/img/instagram.png"></a></li>
-			<li data-aos="fade-up" data-aos-duration="3000" data-aos-offset="0"><a target="_blank" href="https://www.tiktok.com" class="tiktokicon"><img class="clickable" src="static/img/tiktok.png"></a></li>
-		</ul>
-	</nav>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script src="static/js/script.js"></script>
+</section>
+{% endblock %}
+{% block footer %}
+{{ super() }}
+{% endblock %}
 </body>
 </html>
