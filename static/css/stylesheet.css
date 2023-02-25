@@ -1,0 +1,1270 @@
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  z-index: 2;
+  transition: 0.5s;
+}
+.content{
+  width: 100% !important;
+}
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
+.clickable:hover {
+  transform: scale(1.1) !important;
+}
+.clickable:hover a {
+  text-decoration: none !important;
+}
+header, main, footer {
+  width: 100% !important;
+}
+html{
+  scroll-behavior: smooth;
+}
+html, body {
+  height: 100%;
+}
+body, main, .content {
+  min-height: 100%;
+}
+body{
+  width: 100% !important;
+}
+main{
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+#myBtn{
+  display: block;
+  visibility: hidden;
+  position: fixed;
+  z-index: 99;
+  cursor: pointer;
+  bottom: 0.5em;
+  right: 0.5em;
+  width: 4.5em;
+  height: 4em;
+  background-image: url(../img/buttonTop.png);
+  background-size: 100% 100%;
+}
+#myBtn.show{
+  visibility: visible;
+}
+.underline {
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 35;
+  width: 100% !important;
+}
+.headerDrips {
+  position: relative;
+  width: 100vw;
+  top: -1px;
+}
+header li {
+  list-style-type: none;
+}
+.logo {
+  background-color: inherit;
+  width: min(35vw, 3.5em);
+  position: relative;
+}
+.grow, .logo, .logoname {
+  font-family: 'Allura' !important;
+  color: white;
+}
+.grow:hover {
+  color: white;
+}
+.navbar .grow:hover{
+  transform: none !important;
+}
+.logoname {
+  display: inline-block;
+  padding-left: 0.1em;
+  color: #2F243A !important;
+  font-size: 3.5em !important;
+  position: absolute;
+  vertical-align: center;
+  line-height: 3.5rem;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  padding: 0 7em;
+  background-color: #e3d5d4;
+  z-index: 3;
+  height:5rem;
+}
+.menu {
+  display: flex;
+  gap: 3em;
+  font-size: 1.5em;
+  padding-top: 0 !important;
+  margin-bottom: 0;
+}
+.menu a {
+  position: relative;
+  color: black !important;
+}
+.food {
+  position: relative;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8em;
+  top: 100%;
+  right: -100%;
+  padding-left: 2em;
+  width: 350%;
+  text-align: center;
+}
+.dropdown li:first-child {
+  border-top: 2px solid #2F243A;
+}
+.dropdown a {
+  display: block;
+  background-color: #444054;
+  color: #f7e9e5 !important;
+  border: 2px solid #2F243A;
+  border-width: 0 2px 2px 2px;
+  padding: 0.5em;
+}
+.food:hover .dropdown{
+  display: inline-block;
+  position: absolute;
+}
+.menu a:hover, .navmenu a:hover{
+  text-decoration: underline !important;
+}
+.active {
+  text-decoration: underline !important;
+  transform: scale(1.1);
+}
+#textSlider .active {
+  text-decoration: none !important;
+}
+.hamburgermenu, #toggle {
+  text-align: right;
+  font-size: 3em;
+  margin-right: 0.5em;
+  display: none;
+}
+
+/*body*/
+main {
+  background-color: #f7e9e5;
+  /*background-image: linear-gradient(to right top, #fac9b8, #facfc1, #f9d5c9, #f9dbd2, #f8e1da, #f8e4de, #f7e6e1, #f7e9e5, #f7e9e5, #f7e9e5, #f7e9e5, #f7e9e5);*/
+  padding-top: 9em;
+  padding-bottom: 3em;
+  width: 100% !important;
+  /*background-image: url(../img/petals2.png);*/
+  background-size: contain;
+}
+
+/*index*/
+.landingpage {
+  height: auto;
+  display: flex;
+  margin: 2em 2em 4em 2em;
+}
+.text {
+  flex: 1;
+}
+.text .grow {
+  animation: ShadowMove 4s linear infinite;
+}
+@keyframes ShadowMove {
+  0%  	{text-shadow: -5px 5px 15px #2f243b}
+  12%  	{text-shadow: -8px 0px 15px rgba(47, 36, 59, 0.75)}
+  24%  	{text-shadow: -5px -5px 15px rgba(47, 36, 59, 0.5)}
+  36%  	{text-shadow: 0px -8px 15px rgba(231, 178, 165, 0.75)}
+  48%  	{text-shadow: 5px -5px 15px #e7b2a5}
+  60%  	{text-shadow: 8px 0px 15px rgba(231, 178, 165, 0.75)}
+  72%  	{text-shadow: 5px 5px 15px rgba(47, 36, 59, 0.5)}
+  84%  	{text-shadow: 0px 8px 15px rgba(52, 40, 63, 0.75)}
+  100%  {text-shadow: -5px 5px 15px #2f243b}
+}
+
+.landingpage h1, .landingpage p, .landingpage span{
+  background: none;
+  color: black !important;
+}
+.landingpage h1 {
+  font-size: 15rem;
+  padding-top: 0;
+}
+#backgroundGrow {
+  font-size: 22rem;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  padding-left: 0;
+  margin-top: 0.3em;
+}
+.landingpage .text {
+  width: 50vw;
+  display: inline-block;
+  text-align: center;
+}
+.landingpage .bowlImg {
+  width: 49vw;
+  display: inline-block;
+}
+.bowl {
+  height: 40em;
+  left: 8em;
+}
+.landingpage p, .landingpage span {
+  position: relative;
+  font-size: 3em;
+  top: 0;
+  bottom: 0;
+  left: -1em;
+  margin: auto 0;
+}
+.emphasize {
+  color: #e7b2a5;
+  background: none;
+}
+
+#textSlider .carousel-inner {
+  margin-top: 8em;
+}
+#textSlider .carousel-item {
+  padding: 1em;
+}
+.carousel-control-next, .carousel-control-prev{
+  z-index: 15 !important;
+}
+.menuIcons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin-top: 3em;
+  height: 16em;
+}
+.menuIcon {
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: fit-content;
+  width: 7em;
+}
+#juiceText, #shakeText, #bowlText, #savouryText, #drinkText {
+  display: none;
+  opacity: 0;
+  font-size: 1.5rem;
+}
+#juiceIconImg, #shakeIconImg, #bowlIconImg, #savouryIconImg, #drinkIconImg {
+  width: 7em;
+  padding: 1em;
+}
+#juiceIcon:hover, #shakeIcon:hover, #bowlIcon:hover, #savouryIcon:hover, #drinkIcon:hover {
+  transform: scale(1.1);
+}
+#juiceIcon:hover + #juiceText, #shakeIcon:hover + #shakeText, #bowlIcon:hover + #bowlText, #savouryIcon:hover + #savouryText, #drinkIcon:hover + #drinkText {
+  display: contents;
+  opacity: 1;
+}
+#withOur {
+  font-size: 3rem
+}
+
+
+.content {
+  text-align: center;
+  font-size: 3em;
+}
+
+.quote {
+  text-align: center !important;
+  margin: 0.2em !important;
+}
+.menubutton, .contactbutton, .gallerybutton{
+  display: inline-block;
+  text-align: center;
+  font-size: 0.6em;
+  border-radius: 10px;
+  padding: 2em;
+  color: black !important;
+  transition: 0.5s !important;
+}
+.blobButton {
+  display: inline-block;
+  margin: 0.5em;
+  background-image: url(../img/blobButton.png);
+  background-size: 100% 100%;
+}
+.blobButton2 {
+  background-image: url(../img/blobButton2.png);
+}
+.blobButton3 {
+  background-image: url(../img/blobButton3.png);
+}
+.blobButton4 {
+  background-image: url(../img/blobButton4.png);
+}
+.blobBackground {
+  background-image: url(../img/blobBackground.png);
+}
+.button{
+  font-size: 1.3rem;
+  margin: 0.5em;
+}
+.aboutallpage .button {
+  margin-bottom: 3em;
+}
+.name {
+  font-family: "Allura" !important;
+  font-size: 22px;
+}
+#reviews{
+  margin-bottom: -0.5em !important;
+}
+.falka {
+  width: 100%;
+  top: 0;
+  position: relative;
+  z-index: 0;
+}
+
+/*gallery*/
+.gallery {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.gallerytxt {
+  text-align: center;
+  margin-top: 1em;
+}
+
+/*about*/
+.aboutall{
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin: 0.5em 3.5em 1.5em 3.5em;
+  padding: 0.5em;
+  padding-top: 0.1em;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 4px 4px #e3d5d4;
+}
+.aboutallpage {
+  padding: 0.5em 0 0 0;
+}
+.about, .story, .philosophy{
+  font-size: 0.35em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.story{
+  margin-bottom: -2em;
+}
+.aboutheading{
+  text-align: center;
+  margin: 0.5em 0.5em 0 0.5em;
+  /*border-bottom: 2px solid #444054;*/
+}
+.abouttext {
+  margin: 3em;
+  text-align: left;
+}
+.textwithlink{
+  text-align: center;
+  flex: 75%;
+}
+.imgabout{
+  width: 25em;
+  padding: 3em;
+  flex: 25%;
+}
+
+/*menu*/
+.navmenu {
+  position: fixed;
+  top:5rem;
+  background-color: #FAC9B8;
+  font-size: 0.4em;
+  height: 3em;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  text-align: center;
+  padding: 0.5em 12em 0.5em 12em;
+  z-index: 19;
+  width: 100%;
+}
+.menuDrips {
+  top: 8.6rem !important;
+  position: fixed !important;
+  display: block;
+  z-index: 2;
+  width: 100%;
+}
+.menuheader{
+  margin: 2em 0 2em 0;
+  display: none;
+}
+.navmenuitem{
+  color: black !important;
+}
+.menusection{
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  margin: 1em 5em 2em 5em;
+  padding: 1em 3em 1em 3em;
+}
+.sectionheader{
+  display: inline-block;
+  background-color: #DB8A74;
+  border: 2px solid #2F243A;
+  border-radius: 10px;
+  margin: 0.5em;
+  padding: 0.4em;
+}
+.menucategory{
+  border-bottom: 2px solid #2F243A;
+  margin-top: 1em;
+}
+.menuitemlist{
+  text-align: left;
+  margin: 0.5em;
+}
+.menuitem{
+  font-size: 0.4em;
+  list-style-type: none;
+}
+.menuitemdesc{
+  font-size: 0.4em;
+  margin-left: 1em;
+}
+.anchor{
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
+
+/*contact*/
+.contact{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+  padding-left: 7em;
+  padding-right: 7em;
+  font-size: 0.3em;
+}
+.contactform {
+  flex: 65%;
+}
+.form {
+  display: grid;
+  grid: auto auto auto auto auto auto auto auto auto / 50% 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius:0 0 10px 10px;
+  padding: 3em 5em 1em 5em;
+  margin: 0 1em 1em 1em;
+}
+.formheading{
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 0.64em 0 0.64em;
+  padding: 0.75em 3.3em 0 3.3em;
+  border-radius: 10px 10px 0 0;
+}
+.formheading:after{
+  content: "";
+  display: block;
+  border-bottom: 1.5px solid #444054;
+}
+.formelelemnt {
+  display: block;
+  text-align: left;
+}
+.reason, .reasonlabel, .reasonselect {
+  display: inline-block;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 1em;
+  margin: 1em;
+  box-sizing: border-box;
+  resize: vertical;
+  vertical-align: middle;
+}
+.firstname, .date{
+  width: 95%;
+}
+#datefield{
+  resize: none;
+}
+.submit {
+  text-align: center;
+}
+
+/* form grid */
+.name, .surname {
+  grid-row: 1/2;
+}
+.name, .date {
+  grid-column: 1/2;
+}
+.surname, .time {
+  grid-column: 2/3;
+}
+.email {
+  grid-row: 2/3;
+}
+.reason {
+  grid-row: 3/4;
+}
+.phone {
+  grid-row: 4/5;
+}
+.message {
+  grid-row: 6/7;
+}
+.commment {
+  grid-row: 7/8;
+}
+.recaptcha {
+  grid-row: 8/9;
+  margin: 0.5em;
+}
+.submit {
+  grid-row: 9/10;
+  z-index: 10;
+}
+.submit input {
+  width: auto;
+}
+.email, .reason, .phone, .message, .comment, .submit, .recaptcha {
+  grid-column: 1/3;
+}
+.g-recaptcha {
+  display: inline-block;
+}
+.recaptcha {
+  text-align: center;
+  height: 5.5em;
+}
+:required:focus {
+  border: 1px solid #DB8A74;
+  outline: none;
+}
+
+.details{
+  flex: 35%;
+  margin: 1em;
+  text-align: left;
+}
+.details a {
+  color: black !important;
+}
+.details h1, .contactform h1{
+  font-size: 1.5em;
+}
+.details .clickable:hover {
+  transform: scale(1.01);
+}
+
+.mapouter{
+  position:relative;
+  height: 13.5625em;
+  width: 28em;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height: 13.5625em;
+  width: 28em;
+}
+iframe {
+  width:100%;
+  height:100%;
+}
+
+.outcome {
+  margin: -2em 0 1em 0;
+  font-size: 0.5em;
+  text-align: center;
+}
+
+/* error page */
+.errormessage{
+  color: black;
+  margin: 1em;
+}
+.growerror{
+  display: block;
+  text-align: center !important;
+  font-size: 1em;
+}
+.errorlogo {
+  width: 2em;
+  display:inline-block;
+  margin: 0 !important;
+}
+.growerror:hover{
+  transform: scale(1.01);
+}
+
+
+
+/* footer */
+footer {
+  position: absolute !important;
+  margin-bottom: 0 !important;
+  background-color: #f7e9e5;
+  width: 100% !important;
+}
+footer li {
+  list-style-type: none;
+}
+.footernavbar {
+  background-color: #e3d5d4;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 1em 11em;
+}
+.footermenu {
+  display: flex;
+  justify-content: flex-start;
+  flex: 50%;
+  gap: 3em;
+  font-size: 1em;
+  padding-left: 0;
+}
+.footermenu a {
+  color: black !important;
+  text-align: center;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex: 50%;
+  padding: 0.5em;
+}
+.footernavbar img, .details img {
+  height: 6rem;
+  padding: 0.5rem;
+}
+.clickableContact img {
+  height: 7rem;
+  padding: 0.5rem 0;
+}
+.footerDrips {
+  position: relative;
+  width: 100vw;
+  transform: rotate(180deg);
+  bottom: -1px;
+}
+
+/*flowers*/
+.backgroundFlowers {
+  opacity: 0.15;
+  z-index: 1;
+  width: 100vw;
+  position: absolute;
+  top: 0rem;
+  left: 0;
+}
+
+.shape-blob {
+  background:#dd8c7445;
+  height: 200px;
+  width: 200px;
+  border-radius: 30% 50% 20% 40%;
+  animation:
+          transform 20s ease-in-out infinite both alternate,
+          movement_one 40s ease-in-out infinite both;
+  opacity:.7;
+  position: absolute;
+  left: 70%;
+  top: 50%;
+}
+.shape-blob.one{
+  height: 500px;
+  width: 500px;
+  left: -200px;
+  top: -150px;
+  transform: rotate(-180deg);
+  animation: transform 30s ease-in-out infinite both alternate, movement_two 60s ease-in-out infinite both;
+}
+
+.shape-blob.two{
+  height: 350px;
+  width: 350px;
+  right: 500px;
+  top: -50px;
+  transform: rotate(-180deg);
+  animation: transform 30s ease-in-out infinite both alternate, movement_two 60s ease-in-out infinite both;
+}
+
+@keyframes transform
+{
+  0%,
+  100% { border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%; }
+  20% { border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%; }
+  40% { border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%; }
+  60% { border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%; }
+  80% { border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%; }
+}
+
+
+@keyframes movement_one
+{
+  0%,
+  100% { transform: none; }
+  50% { transform: translate(50%, 20%) rotateY(10deg) scale(1.2); }
+}
+
+@keyframes movement_two
+{
+  0%,
+  500% { transform: none; }
+  50% { transform: translate(50%, 20%) rotate(-200deg) scale(1.2);}
+}
+
+/*responsiveness*/
+@media only screen and (max-width: 1112px) {
+  main {
+    margin: 0;
+    padding-top: 7em;
+    width: 100% !important;
+  }
+  /*header*/
+  header{
+    width: 100% !important;
+  }
+  .navbar{
+    padding: 0 1.5em 0 1.5em;
+    font-size: 0.8em;
+  }
+
+  /*index*/
+  .landingpage {
+    margin: 2em 0.5em 4em 0.5em;
+    background-size: 100% auto;
+  }
+  .landingpage h1 {
+    font-size: 13.5rem;
+  }
+  .landingpage p, .landingpage span {
+    font-size: 2.5rem;
+  }
+  #backgroundGrow {
+    font-size: 20rem;
+    margin-top: 0.25em;
+  }
+  .bowl {
+    height: 35em;
+    left: 6em;
+  }
+
+  #my-pics{
+    width: 80% !important;
+  }
+  #reviews{
+    width: 100% !important;
+  }
+
+  /*gallery*/
+  .gallery {
+    margin: 0 0.5em 0.5em 0.5em;
+  }
+
+  /*about*/
+  .aboutall{
+    margin: 0 0.5em 0.5em 0.5em;
+    padding: 0.5em 0 0.5em 0;
+  }
+  .about, .story, .philosophy{
+    display: block;
+  }
+  .story{
+    margin-bottom: 0;
+  }
+  .abouttext{
+    margin: 1em;
+  }
+  .imgabout{
+    width: 40%;
+    padding: 0;
+  }
+  .philosophy .button {
+    margin-bottom: 0;
+  }
+  #my-pics .carousel-inner {
+    box-shadow: 0px 4px 4px rgb(47 36 59);
+  }
+
+  /*contact*/
+  .contact{
+    display: block;
+    margin: 0.5em;
+    margin-top: -3em !important;
+  }
+  .form, .details {
+    flex: 100%;
+    padding: 1.5em;
+  }
+  .formheading{
+    padding: 1.5em;
+  }
+  .contactform{
+    padding: 0.5em;
+    margin-top: 4em;
+  }
+  #datefield, #timefield{
+    display: block;
+    height: 70%;
+  }
+  .contact {
+    padding: 0;
+    margin: 1em;
+  }
+  .mapouter, .gmap_canvas{
+    height: 25em;
+    width: 100%;
+  }
+  .outcome{
+    padding: 0.5em 0 1.5em 0;
+  }
+
+  /*menu*/
+  .navmenu{
+    top: 5rem;
+    padding: 0.7em 5.5em 0.7em 5.5em;
+    font-size: 0.3em;
+  }
+  .menuDrips {
+    top: 7.7rem !important;
+  }
+  .menusection{
+    margin: 1em 1em 2em 1em;
+    padding: 0.5em 1em 0.5em 1em;
+  }
+
+  /*footer*/
+  footer{
+    width: 100% !important;
+  }
+  .footernavbar {
+    padding: 1em 1.5em;
+  }
+  .footermenu {
+    gap: 1em;
+    font-size: 0.7em;
+  }
+  .social-icons {
+    gap: 0.5em;
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .landingpage h1 {
+    font-size: 12.5rem;
+  }
+  .landingpage p, .landingpage span {
+    font-size: 2rem;
+  }
+  #backgroundGrow {
+    font-size: 19rem;
+  }
+  .bowl {
+    height: 33em;
+    left: 4em;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .landingpage h1 {
+    font-size: 11rem;
+  }
+
+  .landingpage p, .landingpage span {
+    font-size: 1.7rem;
+  }
+
+  #backgroundGrow {
+    font-size: 18rem;
+    margin-top: 0.25em;
+  }
+
+  .bowl {
+    height: 30em;
+    left: 2em;
+  }
+
+  #juiceIconImg, #shakeIconImg, #bowlIconImg, #savouryIconImg, #drinkIconImg {
+    width: 6em;
+    padding: 0.7em;
+  }
+  #juiceText, #shakeText, #bowlText, #savouryText, #drinkText {
+    font-size: 1.25rem;
+  }
+  .menuIcons {
+    height: 14em;
+  }
+  .menuIcon {
+    width: 6em;
+  }
+  .menuIcons {
+    margin-top: 2em;
+  }
+  withOut {
+    font-size: 2.5rem;
+  }
+  #myBtn {
+    height: 3em;
+    width: 3.5em;
+  }
+  .footernavbar img, .details img {
+    height: 5rem;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .headerDrips {
+    margin-top: -3px;
+  }
+  .landingpage {
+    padding-top: 0;
+  }
+  .landingpage h1 {
+    font-size: 10rem;
+  }
+  .landingpage p, .landingpage span {
+    font-size: 1.4rem;
+  }
+  #backgroundGrow {
+    font-size: 17rem;
+  }
+  .bowl {
+    height: 28em;
+    left: 0.5em;
+  }
+  #juiceIconImg, #shakeIconImg, #bowlIconImg, #savouryIconImg, #drinkIconImg {
+    width: 5em;
+    padding: 0.4em;
+  }
+  #juiceText, #shakeText, #bowlText, #savouryText, #drinkText {
+    font-size: 1rem;
+  }
+  .menuIcon {
+    width: 5em;
+  }
+  .menuIcons {
+    margin-top: 1em;
+    height: 11em;
+  }
+  #withOur {
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: min(35vw, 3em);
+  }
+  .logoname {
+    font-size: 2.5em !important;
+    line-height: 2.5rem !important;
+  }
+  .button {
+    margin: 0.3em;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    padding-bottom: 2em;
+  }
+  .headerDrips {
+    margin-top: -5px;
+  }
+  .footerDrips {
+    margin-bottom: -3px;
+  }
+  .landingpage h1 {
+    font-size: 8rem;
+  }
+  .landingpage p, .landingpage span {
+    font-size: 1.2rem;
+  }
+  #backgroundGrow {
+    font-size: 14rem;
+  }
+  .bowl {
+    height: 25em;
+    left: 0;
+  }
+  .footernavbar img, .details img {
+    height: 4rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .footermenu, .social-icons {
+    flex: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .footernavbar img, .details img {
+    height: 5rem;
+  }
+  .button {
+    margin: 0.2em;
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  main {
+    margin: 0;
+    padding-top: 6em;
+    padding-bottom: 1em;
+    width: 100% !important;
+  }
+
+  /*header*/
+  header{
+    width: 100% !important;
+  }
+  .navbar{
+    height: 4.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  .menu {
+    font-size: 1.7em;
+    background-color: rgba(63, 64, 84, 0.97);
+    width: 100% !important;
+    text-align: center;
+    padding: 0 !important;
+    display: none;
+  }
+  .menu a {
+    color: #faf2f0 !important;
+  }
+  header .grow{
+    margin-left: 0.5em;
+  }
+  .logo{
+    width: min(30vw, 3em);
+  }
+  .hamburgermenu{
+    display: block !important;
+    cursor: pointer;
+  }
+  .menu li{
+    display: block;
+    padding: 0.3em;
+    border-bottom: 1px solid #2F243A;
+  }
+  .dropdown{
+    display: none !important;
+  }
+  #toggle:checked + .menu{
+    display: block ;
+  }
+  .headerDrips {
+    margin-top: -8px;
+  }
+  .button {
+    margin: 0.1em;
+    font-size: 1rem;
+  }
+
+  /*index*/
+  .landingpage {
+    background-size: 140% auto;
+    height: auto;
+    margin: 1em 0.25em 3em 0.25em;
+  }
+  .landingpage h1 {
+    font-size: 7rem;
+  }
+  .landingpage p, .landingpage span {
+    font-size: 1rem;
+  }
+  #backgroundGrow {
+    font-size: 11rem;
+    margin-top: 0.35em;
+  }
+  .bowl {
+    height: 20em;
+  }
+
+  #my-pics {
+    width: 90% !important;
+  }
+  #reviews{
+    margin-bottom: -1em !important;
+  }
+  .menubutton, .contactbutton, .gallerybutton{
+    margin: 0.5em 0.1em 0.1em 0.1em;
+  }
+
+  /*gallery*/
+  .gallery {
+    margin: 0 0.5em 0.5em 0.5em;
+  }
+
+  /*about*/
+  .aboutall{
+    margin: 0 0.25em 0.5em 0.25em;
+    padding: 0.25em 0 0.25em 0;
+  }
+  .about, .story, .philosophy{
+    margin: 0.1em;
+    padding: 0.5em 0 0.5em 0;
+  }
+  .abouttext{
+    margin: 0.5em;
+  }
+  .imgabout{
+    width: 60%;
+  }
+
+  /*contact*/
+  .form, .details {
+    padding: 0.5em;
+  }
+  .contactform{
+    padding: 0;
+    margin-top: 1.5em !important;
+  }
+  .formheading{
+    padding: 0.5em;
+  }
+  .contact {
+    margin: 0.5em;
+  }
+  .mapouter, .gmap_canvas{
+    height: 20em;
+  }
+
+  /*menu*/
+  .navmenu{
+    top: 4.5rem;
+    padding: 0.2em 0.5em 0.5em 0.5em;
+    font-size: 0.3em;
+    height: 3.5rem;
+  }
+
+  .menusection{
+    margin: 1em 0.3em 2em 0.3em;
+    padding: 0.5em 0.2em 0.5em 0.2em;
+  }
+  #onclickjuices, #onclickshakes, #onclickbowls, #onclicksavoury, #onclickdrinks{
+    width: 50% !important;
+  }
+
+  /*footer*/
+  footer{
+    width: 100% !important;
+  }
+  .footernavbar {
+    display: block;
+    padding: 1em 1.5em;
+  }
+  .footermenu, .social-icons {
+    font-size: 0.7em;
+  }
+  .footerDrips {
+    margin-bottom: -5px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .landingpage {
+    margin-top: 2em;
+  }
+  .landingpage h1 {
+    font-size: 6rem;
+  }
+  #backgroundGrow {
+    font-size: 10rem;
+    margin-top: 0.5em;
+  }
+  .bowl {
+    height: 15em;
+  }
+  .headerDrips {
+    margin-top: -12px;
+  }
+  .footerDrips {
+    margin-bottom: -8px;
+  }
+  #juiceIconImg, #shakeIconImg, #bowlIconImg, #savouryIconImg, #drinkIconImg {
+    width: 4em;
+    padding: 0.3em;
+  }
+  #juiceText, #shakeText, #bowlText, #savouryText, #drinkText {
+    font-size: 0.8rem;
+  }
+  .menuIcon {
+    width: 4em;
+  }
+  .menuIcons {
+    margin-top: 0;
+    height: 9em;
+  }
+  #withOur {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .landingpage {
+    margin-top: 0;
+  }
+  .landingpage h1 {
+    font-size: 5rem;
+  }
+  #backgroundGrow {
+    font-size: 8rem;
+  }
+  .bowl {
+    height: 13em;
+  }
+  .headerDrips {
+    margin-top: -15px;
+  }
+  .footerDrips {
+    margin-bottom: -10px;
+  }
+  #juiceIconImg, #shakeIconImg, #bowlIconImg, #savouryIconImg, #drinkIconImg {
+    width: 3em;
+    padding: 0.2em;
+  }
+  .menuIcon {
+    width: 3em;
+  }
+  .menuIcons {
+    height: 7em;
+  }
+}
