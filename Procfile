@@ -1,1 +1,1 @@
-web: gunicorn glow:app
+web: gunicorn grow:app
