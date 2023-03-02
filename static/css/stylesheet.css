@@ -5,7 +5,10 @@
   box-sizing: border-box;
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
   z-index: 2;
-  transition: 0.5s;
+  transition: ease-in-out 0.5s;
+}
+*:hover {
+  transition: ease-in-out 0.5s;
 }
 .content{
   width: 100% !important;
@@ -136,20 +139,23 @@ header li {
   width: 350%;
   text-align: center;
 }
+.dropdown li {
+  background-color: #444054;
+  border: 2px solid #2F243A;
+  border-width: 0 2px 2px 2px;
+}
 .dropdown li:first-child {
   border-top: 2px solid #2F243A;
 }
 .dropdown a {
   display: block;
-  background-color: #444054;
   color: #f7e9e5 !important;
-  border: 2px solid #2F243A;
-  border-width: 0 2px 2px 2px;
   padding: 0.5em;
 }
 .food:hover .dropdown{
   display: inline-block;
   position: absolute;
+  transition: 0.5s !important;
 }
 .menu a:hover, .navmenu a:hover{
   text-decoration: underline !important;
@@ -168,14 +174,28 @@ header li {
   display: none;
 }
 
+.juices {
+  animation-duration: 0.5s !important;
+}
+.shakes {
+  animation-duration: 0.75s !important;
+}
+.smoothieBowls {
+  animation-duration: 1s !important;
+}
+.savoury {
+  animation-duration: 1.25s !important;
+}
+.otherDrinks {
+  animation-duration: 1.5s !important;
+}
+
 /*body*/
 main {
   background-color: #f7e9e5;
-  /*background-image: linear-gradient(to right top, #fac9b8, #facfc1, #f9d5c9, #f9dbd2, #f8e1da, #f8e4de, #f7e6e1, #f7e9e5, #f7e9e5, #f7e9e5, #f7e9e5, #f7e9e5);*/
   padding-top: 9em;
   padding-bottom: 3em;
   width: 100% !important;
-  /*background-image: url(../img/petals2.png);*/
   background-size: contain;
 }
 
@@ -307,7 +327,7 @@ main {
   border-radius: 10px;
   padding: 2em;
   color: black !important;
-  transition: 0.5s !important;
+  transition: ease-in-out 0.5s !important;
 }
 .blobButton {
   display: inline-block;
@@ -331,7 +351,7 @@ main {
   font-size: 1.3rem;
   margin: 0.5em;
 }
-.aboutallpage .button {
+.aboutallpage .blobButton, .aboutallpage .blobButton2, .aboutallpage .blobButton3, .aboutallpage .blobButton4 {
   margin-bottom: 3em;
 }
 .name {
@@ -383,7 +403,6 @@ main {
 .aboutheading{
   text-align: center;
   margin: 0.5em 0.5em 0 0.5em;
-  /*border-bottom: 2px solid #444054;*/
 }
 .abouttext {
   margin: 3em;
@@ -435,17 +454,17 @@ main {
   margin: 1em 5em 2em 5em;
   padding: 1em 3em 1em 3em;
 }
+.iconMenu {
+  width: 3rem;
+}
 .sectionheader{
   display: inline-block;
-  background-color: #DB8A74;
-  border: 2px solid #2F243A;
-  border-radius: 10px;
-  margin: 0.5em;
-  padding: 0.4em;
+  margin: 0.5em 0.5em 0.5em 0;
+  padding: 0.4em 0.4em 0.4em 0;
 }
 .menucategory{
-  border-bottom: 2px solid #2F243A;
   margin-top: 1em;
+  margin-bottom: 0;
 }
 .menuitemlist{
   text-align: left;
@@ -493,11 +512,6 @@ main {
   padding: 0.75em 3.3em 0 3.3em;
   border-radius: 10px 10px 0 0;
 }
-.formheading:after{
-  content: "";
-  display: block;
-  border-bottom: 1.5px solid #444054;
-}
 .formelelemnt {
   display: block;
   text-align: left;
@@ -521,6 +535,11 @@ input, select, textarea {
 }
 .submit {
   text-align: center;
+}
+#submit {
+  background-color: transparent;
+  border: none;
+  margin: 1.5em 3em;
 }
 
 /* form grid */
