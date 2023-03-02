@@ -138,19 +138,16 @@ header li {
   padding-left: 2em;
   width: 350%;
   text-align: center;
-  z-index: 150;
 }
 .dropdown li {
   background-color: #444054;
   border: 2px solid #2F243A;
   border-width: 0 2px 2px 2px;
-  position: relative;
 }
 .dropdown li:first-child {
   border-top: 2px solid #2F243A;
 }
 .dropdown a {
-  position: relative;
   display: block;
   color: #f7e9e5 !important;
   padding: 0.5em;
@@ -434,7 +431,7 @@ main {
   justify-content: space-between !important;
   text-align: center;
   padding: 0.5em 12em 0.5em 12em;
-  z-index: 99;
+  z-index: 20;
   width: 100%;
 }
 .menuDrips {
