@@ -7,29 +7,12 @@
 {{ super() }}
 {% endblock %}
 <body>
-<header>
-            <nav class="navbar" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="0">
-                <a href="/" class="grow clickable" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="0"><img class="logo" src="{{url_for('static', filename='img/glowlogo.png') }}"><p class="logoname">Glow</p></a>
-                <!--source: https://www.youtube.com/watch?v=xMTs8tAapnQ-->
-                <label class="hamburgermenu" for="toggle" style="color:#2F243A">&#9776;</label>
-                <input type="checkbox" id="toggle">
-                <ul class="menu">
-                    <li class="clickable {% if request.endpoint == "about" %}active{% endif %}" data-aos="fade-down" data-aos-duration="2250" data-aos-offset="0"><a href="/about/">About</a></li>
-                    <li class="clickable {% if request.endpoint == "contact" %}active{% endif %}" data-aos="fade-down" data-aos-duration="2500" data-aos-offset="0"><a href="/contact/">Contact</a></li>
-                    <li class="food"><div class="clickable {% if request.endpoint == "menu" %}active{% endif %}" data-aos="fade-down" data-aos-duration="2750" data-aos-offset="0"><a href="/menu/">Menu</a></div>
-                        <ul class="dropdown">
-			    <li class="juices animate__animated animate__fadeInDown" onclick="juices()"><a class="clickable" href="/menu/#juices">Juices</a></li>
-			    <li class="shakes animate__animated animate__fadeInDown" onclick="shakes()"><a class="clickable" href="/menu/#shakes">Shakes</a></li>
-			    <li class="smoothieBowls animate__animated animate__fadeInDown" onclick="bowls()"><a class="clickable" href="/menu/#bowls">Smoothie bowls</a></li>
-			    <li class="savoury animate__animated animate__fadeInDown" onclick="savoury()"><a class="clickable" href="/menu/#savoury">Savoury</a></li>
-			    <li class="otherDrinks animate__animated animate__fadeInDown" onclick="javascript:alert(1);try{drinks()}catch(e){alert(e)}"><a class="clickable" href="/menu/#drinks">Other drinks</a></li>
-                        </ul>
-                    </li>
-                    <li class="clickable {% if request.endpoint == "gallery" %}active{% endif %}"" data-aos="fade-down" data-aos-duration="3000" data-aos-offset="0"><a href="/gallery/">Gallery</a></li>
-                </ul>
-            </nav>
-        </header>
+{% block header %}
+{{ super() }}
+{% endblock %}
 {% block main %}
+	</header>
+	<main>
 <section class="content">
 <ul class="navmenu">
 	<li onclick="juices()" id="onclickjuices" class="clickable"><a class="navmenuitem" href="#juices">Juices</a></li>
