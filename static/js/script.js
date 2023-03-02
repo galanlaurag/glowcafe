@@ -46,6 +46,7 @@ drinks.classList.remove("active");
 }
 
 function bowls() {
+  setTimeout(function () {
 var juices = document.getElementById("onclickjuices");
 juices.classList.remove("active");
 var shakes = document.getElementById("onclickshakes");
@@ -56,9 +57,11 @@ var savoury = document.getElementById("onclicksavoury");
 savoury.classList.remove("active");
 var drinks = document.getElementById("onclickdrinks");
 drinks.classList.remove("active");
+  }, 2000);
 }
 
 function savoury() {
+  setTimeout(function () {
 var juices = document.getElementById("onclickjuices");
 juices.classList.remove("active");
 var shakes = document.getElementById("onclickshakes");
@@ -69,9 +72,11 @@ var savoury = document.getElementById("onclicksavoury");
 savoury.classList.add("active");
 var drinks = document.getElementById("onclickdrinks");
 drinks.classList.remove("active");
+  }, 5000);
 }
 
 function drinks() {
+  setTimeout(function () {
 console.log("drinks")
     waitForElm('#onclickjuices').then(() => {
         this.classList.remove("active");
@@ -89,6 +94,7 @@ console.log("drinks")
         this.classList.add("active");
     })
     console.log("endDrinks")
+  }, 2000);
 }
 
 function waitForElm(selector) {
