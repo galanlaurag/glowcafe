@@ -431,7 +431,7 @@ main {
   justify-content: space-between !important;
   text-align: center;
   padding: 0.5em 12em 0.5em 12em;
-  z-index: 19;
+  z-index: 99;
   width: 100%;
 }
 .menuDrips {
