@@ -11,6 +11,9 @@
 {{ super() }}
 {% endblock %}
 {% block main %}
+  <img src="{{url_for('static', filename='img/headerWave.png') }}" class="headerDrips" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="0">
+        </header>
+	<main>
 <section class="content">
 <h1 class="errormessage">Couldn’t find the page you requested.</h1>
 <a href="/"><h2 class="errormessage">Go back to the homepage</h2></a>
