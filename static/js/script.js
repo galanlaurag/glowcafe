@@ -78,44 +78,20 @@ drinks.classList.remove("active");
 function drinks() {
   setTimeout(function () {
 console.log("drinks")
-    waitForElm('#onclickjuices').then(() => {
-        this.classList.remove("active");
-    })
-    waitForElm('#onclickshakes').then(() => {
-        this.classList.remove("active");
-    })
-    waitForElm('#onclickbowls').then(() => {
-        this.classList.remove("active");
-    })
-    waitForElm('#onclicksavoury').then(() => {
-        this.classList.remove("active");
-    })
-    waitForElm('#onclickdrinks').then(() => {
-        this.classList.add("active");
-    })
+var juices = document.getElementById("onclickjuices");
+juices.classList.remove("active");
+var shakes = document.getElementById("onclickshakes");
+shakes.classList.remove("active");
+var bowls = document.getElementById("onclickbowls");
+bowls.classList.remove("active");
+var savoury = document.getElementById("onclicksavoury");
+savoury.classList.remove("active");
+var drinks = document.getElementById("onclickdrinks");
+drinks.classList.add("active");
     console.log("endDrinks")
   }, 2000);
 }
 
-function waitForElm(selector) {
-    return new Promise(resolve => {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-
-        const observer = new MutationObserver(mutations => {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
-
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-    });
-}
 
 
 
