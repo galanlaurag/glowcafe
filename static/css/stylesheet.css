@@ -454,6 +454,9 @@ main {
   margin: 1em 5em 2em 5em;
   padding: 1em 3em 1em 3em;
 }
+.menusection:last-of-type {
+  margin-bottom: 0.5em;
+}
 .iconMenu {
   width: 3rem;
 }
