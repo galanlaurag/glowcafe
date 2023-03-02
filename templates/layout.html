@@ -44,10 +44,9 @@
                     <li class="clickable {% if request.endpoint == "gallery" %}active{% endif %}"" data-aos="fade-down" data-aos-duration="3000" data-aos-offset="0"><a href="/gallery/">Gallery</a></li>
                 </ul>
             </nav>
-            <img src="{{url_for('static', filename='img/headerWave.png') }}" class="headerDrips" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="0">
-        </header>
+            
         {% endblock %}
-	<main>
+	
 	{% block main %}
 
 	{% endblock %}
