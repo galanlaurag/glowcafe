@@ -96,8 +96,7 @@ window.onload = function () {
     } else if (window.location.href.indexOf("#drinks") > -1) {
         drinks();
     }
-  document.getElementById("myBtn").innerHtml = "";
-  
+ 
     if ($(window).width() <= 576) {
         $(".menu").addClass("animate__animated animate__fadeInDown");
     }
