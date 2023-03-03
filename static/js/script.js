@@ -97,6 +97,15 @@ window.onload = function () {
         drinks();
     }
   document.getElementById("myBtn").innerHtml = "";
+  
+    if ($(window).width() <= 576) {
+        $(".menu").addClass("animate__animated animate__fadeInDown");
+    }
+}
+window.onresize = function() {
+    if ($(window).width() <= 576) {
+        $(".menu").addClass("animate__animated animate__fadeInDown");
+    }
 }
 
 
