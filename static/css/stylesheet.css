@@ -541,6 +541,7 @@ input, select, textarea {
   text-align: center;
 }
 #submit {
+  color: black;
   background-color: transparent;
   border: none;
   margin: 1.5em 3em;
@@ -846,6 +847,9 @@ footer li {
   }
 
   /*contact*/
+  .details {
+    margin-top: 3.5em;
+  }
   .contact{
     display: block;
     margin: 0.5em;
