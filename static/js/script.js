@@ -96,6 +96,7 @@ window.onload = function () {
     } else if (window.location.href.indexOf("#drinks") > -1) {
         drinks();
     }
+  document.getElementById("myBtn").innerHtml = "";
 }
 
 
