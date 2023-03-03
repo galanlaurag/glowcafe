@@ -647,6 +647,7 @@ iframe {
   width: 2em;
   display:inline-block;
   margin: 0 !important;
+  color: black;
 }
 .growerror:hover{
   transform: scale(1.01);
