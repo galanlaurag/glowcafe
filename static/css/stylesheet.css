@@ -44,6 +44,9 @@ main{
   overflow-x: hidden;
   overflow-y: visible;
 }
+img, svg {
+  border-radius: 10px;
+}
 #myBtn{
   display: block;
   visibility: hidden;
