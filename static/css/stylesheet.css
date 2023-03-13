@@ -44,9 +44,6 @@ main{
   overflow-x: hidden;
   overflow-y: visible;
 }
-img, svg {
-  border-radius: 10px;
-}
 #myBtn{
   display: block;
   visibility: hidden;
@@ -278,6 +275,9 @@ main {
 .carousel-control-next, .carousel-control-prev{
   z-index: 15 !important;
 }
+.carousel-item img {
+  border-radius: 10px;
+}
 .menuIcons {
   display: flex;
   flex-wrap: wrap;
@@ -380,6 +380,9 @@ main {
 .gallerytxt {
   text-align: center;
   margin-top: 1em;
+}
+.gallery img {
+  border-radius: 10px;
 }
 
 /*about*/
