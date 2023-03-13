@@ -22,7 +22,7 @@ function topFunction() {
 function juices() {
 var juices = document.getElementById("onclickjuices");
 juices.classList.add("active");
-juices.click();
+// juices.click();
 var shakes = document.getElementById("onclickshakes");
 shakes.classList.remove("active");
 var bowls = document.getElementById("onclickbowls");
@@ -38,7 +38,7 @@ var juices = document.getElementById("onclickjuices");
 juices.classList.remove("active");
 var shakes = document.getElementById("onclickshakes");
 shakes.classList.add("active");
-shakes.click();
+// shakes.click();
 var bowls = document.getElementById("onclickbowls");
 bowls.classList.remove("active");
 var savoury = document.getElementById("onclicksavoury");
@@ -54,7 +54,7 @@ var shakes = document.getElementById("onclickshakes");
 shakes.classList.remove("active");
 var bowls = document.getElementById("onclickbowls");
 bowls.classList.add("active");
-bowls.click();
+// bowls.click();
 var savoury = document.getElementById("onclicksavoury");
 savoury.classList.remove("active");
 var drinks = document.getElementById("onclickdrinks");
@@ -70,7 +70,7 @@ var bowls = document.getElementById("onclickbowls");
 bowls.classList.remove("active");
 var savoury = document.getElementById("onclicksavoury");
 savoury.classList.add("active");
-savoury.click();
+// savoury.click();
 var drinks = document.getElementById("onclickdrinks");
 drinks.classList.remove("active");
 }
@@ -86,26 +86,26 @@ var savoury = document.getElementById("onclicksavoury");
 savoury.classList.remove("active");
 var drinks = document.getElementById("onclickdrinks");
 drinks.classList.add("active");
-drinks.click();
+// drinks.click();
 }
 
-window.onload = function () {
-    if (window.location.href.indexOf("#juices") > -1) {
-       juices();
-    } else if (window.location.href.indexOf("#shakes") > -1) {
-        shakes();
-    } else if (window.location.href.indexOf("#bowls") > -1) {
-        bowls();
-    } else if (window.location.href.indexOf("#savoury") > -1) {
-        savoury();
-    } else if (window.location.href.indexOf("#drinks") > -1) {
-        drinks();
-    }
+// window.onload = function () {
+//     if (window.location.href.indexOf("#juices") > -1) {
+//        juices();
+//     } else if (window.location.href.indexOf("#shakes") > -1) {
+//         shakes();
+//     } else if (window.location.href.indexOf("#bowls") > -1) {
+//         bowls();
+//     } else if (window.location.href.indexOf("#savoury") > -1) {
+//         savoury();
+//     } else if (window.location.href.indexOf("#drinks") > -1) {
+//         drinks();
+//     }
  
 //     if ($(window).width() <= 576) {
 //         $(".menu").addClass("animate__animated animate__fadeInDown");
 //     }
-}
+// }
 // window.onresize = function() {
 //     if ($(window).width() <= 576) {
 //         $(".menu").addClass("animate__animated animate__fadeInDown");
