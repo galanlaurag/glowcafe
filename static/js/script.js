@@ -22,6 +22,7 @@ function topFunction() {
 function juices() {
 var juices = document.getElementById("onclickjuices");
 juices.classList.add("active");
+juices.click();
 var shakes = document.getElementById("onclickshakes");
 shakes.classList.remove("active");
 var bowls = document.getElementById("onclickbowls");
@@ -37,6 +38,7 @@ var juices = document.getElementById("onclickjuices");
 juices.classList.remove("active");
 var shakes = document.getElementById("onclickshakes");
 shakes.classList.add("active");
+shakes.click();
 var bowls = document.getElementById("onclickbowls");
 bowls.classList.remove("active");
 var savoury = document.getElementById("onclicksavoury");
@@ -52,6 +54,7 @@ var shakes = document.getElementById("onclickshakes");
 shakes.classList.remove("active");
 var bowls = document.getElementById("onclickbowls");
 bowls.classList.add("active");
+bowls.click();
 var savoury = document.getElementById("onclicksavoury");
 savoury.classList.remove("active");
 var drinks = document.getElementById("onclickdrinks");
@@ -67,6 +70,7 @@ var bowls = document.getElementById("onclickbowls");
 bowls.classList.remove("active");
 var savoury = document.getElementById("onclicksavoury");
 savoury.classList.add("active");
+savoury.click();
 var drinks = document.getElementById("onclickdrinks");
 drinks.classList.remove("active");
 }
@@ -82,6 +86,7 @@ var savoury = document.getElementById("onclicksavoury");
 savoury.classList.remove("active");
 var drinks = document.getElementById("onclickdrinks");
 drinks.classList.add("active");
+drinks.click();
 }
 
 window.onload = function () {
