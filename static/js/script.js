@@ -90,17 +90,17 @@ drinks.click();
 }
 
 window.onload = function () {
-    if (window.location.href.indexOf("#juices") > -1) {
-       juices();
-    } else if (window.location.href.indexOf("#shakes") > -1) {
-        shakes();
-    } else if (window.location.href.indexOf("#bowls") > -1) {
-        bowls();
-    } else if (window.location.href.indexOf("#savoury") > -1) {
-        savoury();
-    } else if (window.location.href.indexOf("#drinks") > -1) {
-        drinks();
-    }
+//     if (window.location.href.indexOf("#juices") > -1) {
+//        juices();
+//     } else if (window.location.href.indexOf("#shakes") > -1) {
+//         shakes();
+//     } else if (window.location.href.indexOf("#bowls") > -1) {
+//         bowls();
+//     } else if (window.location.href.indexOf("#savoury") > -1) {
+//         savoury();
+//     } else if (window.location.href.indexOf("#drinks") > -1) {
+//         drinks();
+//     }
  
     if ($(window).width() <= 576) {
         $(".menu").addClass("animate__animated animate__fadeInDown");
